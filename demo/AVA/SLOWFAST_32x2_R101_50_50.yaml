@@ -73,7 +73,7 @@ OUTPUT_DIR: .
 DEMO:
   ENABLE: True
   LABEL_FILE_PATH: "./demo/AVA/ava.json" # Add local label file path here.
-  INPUT_VIDEO: "/kaggle/input/alphaexper24//kaggle/input/alphaexper24/video/1_24_000_ZL20220929_01_R_4_68.8cm_V20_H19.mp4"
+  INPUT_VIDEO: "/kaggle/input/alphaexper24/video/1_24_000_ZL20220929_01_R_4_68.8cm_V20_H19.mp4"
   OUTPUT_FILE: "./output.mp4"
   WEBCAM: -1
   DETECTRON2_CFG: "COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"
