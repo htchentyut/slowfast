@@ -101,6 +101,7 @@ def demo(cfg):
             slowfast/config/defaults.py
     """
     # AVA format-specific visualization with precomputed boxes.
+    print(cfg.DETECTION.ENABLE, cfg.DEMO.PREDS_BOXES)
     if cfg.DETECTION.ENABLE and cfg.DEMO.PREDS_BOXES != "":
         precomputed_box_vis = AVAVisualizerWithPrecomputedBox(cfg)
         precomputed_box_vis()
