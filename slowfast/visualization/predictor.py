@@ -129,6 +129,7 @@ class ActionPredictor:
             async_vis (AsyncVis object): asynchronous visualizer.
             gpu_id (Optional[int]): GPU id.
         """
+        print("gpu_id: ", gpu_id)
         self.predictor = Predictor(cfg=cfg, gpu_id=gpu_id)
         self.async_vis = async_vis
 
