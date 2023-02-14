@@ -177,6 +177,7 @@ class Detectron2Predictor:
         self.cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = cfg.DEMO.DETECTRON2_THRESH
         self.cfg.MODEL.WEIGHTS = cfg.DEMO.DETECTRON2_WEIGHTS
         self.cfg.INPUT.FORMAT = cfg.DEMO.INPUT_FORMAT
+        print("Detectron2Predictor: ", gpu_id)
         if cfg.NUM_GPUS and gpu_id is None:
             gpu_id = torch.cuda.current_device()
         self.cfg.MODEL.DEVICE = (
