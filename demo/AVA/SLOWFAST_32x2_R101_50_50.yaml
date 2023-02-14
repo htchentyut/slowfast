@@ -60,11 +60,11 @@ TEST:
   DATASET: ava
   BATCH_SIZE: 8
 DATA_LOADER:
-  NUM_WORKERS: 0
+  NUM_WORKERS: 0 #CPU核
   PIN_MEMORY: True
 
-NUM_GPUS: 0
-NUM_SHARDS: 1
+NUM_GPUS: 0  # GPU个数
+NUM_SHARDS: 1 # 子数据集个数
 RNG_SEED: 0
 OUTPUT_DIR: .
 # TENSORBOARD:
@@ -77,4 +77,5 @@ DEMO:
   OUTPUT_FILE: "./output.mp4"
   WEBCAM: -1
   DETECTRON2_CFG: "COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"
-  DETECTRON2_WEIGHTS: detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl
+  DETECTRON2_WEIGHTS: "model_final_280758.pkl"
+  #DETECTRON2_WEIGHTS: detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl
