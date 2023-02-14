@@ -8,7 +8,7 @@ TRAIN:
   CHECKPOINT_FILE_PATH: /kaggle/input/slowfastweight/SLOWFAST_32x2_R101_50_50.pkl  #path to pretrain model
   CHECKPOINT_TYPE: pytorch
 DATA:
-  NUM_FRAMES: 8
+  NUM_FRAMES: 64
   SAMPLING_RATE: 2
   TRAIN_JITTER_SCALES: [256, 320]
   TRAIN_CROP_SIZE: 224
@@ -66,7 +66,7 @@ DATA_LOADER:
 NUM_GPUS: 0  # GPU个数
 NUM_SHARDS: 1 # 子数据集个数
 RNG_SEED: 0
-OUTPUT_DIR: .
+OUTPUT_DIR: "/kaggle/working/"
 # TENSORBOARD:
 #   MODEL_VIS:
 #     TOPK: 2
@@ -74,7 +74,7 @@ DEMO:
   ENABLE: True
   LABEL_FILE_PATH: "./demo/AVA/ava.json" # Add local label file path here.
   INPUT_VIDEO: "/kaggle/input/alphaexper24/video/1_24_000_ZL20220929_01_R_4_68.8cm_V20_H19.mp4"
-  OUTPUT_FILE: "./output.mp4"
+  OUTPUT_FILE: "output.mp4"
   WEBCAM: -1
   DETECTRON2_CFG: "COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"
   DETECTRON2_WEIGHTS: "model_final_280758.pkl"
