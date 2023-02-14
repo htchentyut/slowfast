@@ -52,7 +52,7 @@ def run_demo(cfg, frame_provider):
         colormap=cfg.TENSORBOARD.MODEL_VIS.COLORMAP,
         mode=cfg.DEMO.VIS_MODE,
     )
-    print("CFGGG : , cfg.DEMO.NUM_VIS_INSTANCES)
+    print("CFGGG : ", cfg.DEMO.NUM_VIS_INSTANCES)
     async_vis = AsyncVis(video_vis, n_workers=cfg.DEMO.NUM_VIS_INSTANCES)
 
     if cfg.NUM_GPUS <= 1:
